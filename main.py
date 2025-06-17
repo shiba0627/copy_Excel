@@ -16,7 +16,7 @@ def save_txt(num):
         f.write(str(num))
 
 #GUI生成クラス
-class GUIApp(tk.Tk):
+class GUIApp():
     def __init__(self):
         self.num = road_txt()
         print(f'{TXT_PATH}を読み込みました')
@@ -74,9 +74,6 @@ class GUIApp(tk.Tk):
         self.canvas.itemconfig(self.text_3, text=f'A{self.num}:{self.val}をコピー')
         self.canvas.itemconfig(self.text_2, text=f'次の読み込みは{self.num+1}行目')
         self.num = self.num + 1
-
-    def __del__(self):
-        save_txt(self.num)
 
     def run(self):
         self.root.mainloop()
