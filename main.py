@@ -19,8 +19,8 @@ def save_txt(num):
 class GUIApp():
     def __init__(self):
         self.num = road_txt()
-        print(f'{TXT_PATH}を読み込みました')
-        print(f'次の読み込みは{self.num}行目')
+        #print(f'{TXT_PATH}を読み込みました')
+        #print(f'次の読み込みは{self.num}行目')
         self.wb = load_workbook(filename=FILEPATH)
         self.ws = self.wb.active
 
@@ -70,7 +70,7 @@ class GUIApp():
     def click_copy(self):
         self.val = self.ws[f'A{self.num}'].value
         pyperclip.copy(self.val)
-        print(f'A{self.num}:{self.val}をコピー')
+        #print(f'A{self.num}:{self.val}をコピー')
         self.canvas.itemconfig(self.text_3, text=f'A{self.num}:{self.val}をコピー')
         self.canvas.itemconfig(self.text_2, text=f'次の読み込みは{self.num+1}行目')
         self.num = self.num + 1
