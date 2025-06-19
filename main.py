@@ -2,7 +2,7 @@ from openpyxl import load_workbook
 import pyperclip
 import tkinter as tk
 import tkinter.font as font
-from config import FILEPATH, TXT_PATH, WIDTH, HEIGHT, B_WIDTH, B_HEIGHT, X_COPY,Y_COPY,FONT_SIZE,X_QUIT,Y_QUIT
+from config import FILEPATH,TXT_PATH,WIDTH,HEIGHT,B_WIDTH,B_HEIGHT,X_COPY,Y_COPY,FONT_SIZE,X_QUIT,Y_QUIT
 
 def road_txt():
     try:
